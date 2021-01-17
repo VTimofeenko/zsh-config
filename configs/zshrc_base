@@ -15,7 +15,7 @@ source_if_exists "$ZSH_CONFIG_SHARED_REPO"/overrides_base
 # Aliases: new commands
 source_if_exists "$ZSH_CONFIG_SHARED_REPO"/aliases_base
 # User-defined shortcuts
-source_if_exists "$HOME"/shortcuts
+source_if_exists "$HOME"/.config/shortcuts
 
 
 # bindkey
