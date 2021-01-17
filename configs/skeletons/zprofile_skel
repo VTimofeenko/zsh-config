@@ -1,0 +1,4 @@
+# Sources only for login shells.
+
+export ZSH_CONFIG_SHARED_REPO="${HOME}/.config/zsh/shared-repo"
+#export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
