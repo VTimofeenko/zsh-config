@@ -1,0 +1,9 @@
+#!/bin/sh
+# List of shortcuts that have the same name as the original command, but they override some parameter
+alias\
+    tmux='tmux -f "${HOME}"/.config/tmux/tmux.conf'\
+    ls="ls -hN --color=auto --group-directories-first" \
+    grep="grep --color=auto" \
+    mv='mv -v' \
+    rm="rm -id" \
+

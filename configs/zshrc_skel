@@ -1,0 +1,9 @@
+# #---Sourcing the base config---#
+source ${HOME}/.config/zsh/shared-config/zshrc_base
+
+# Should be sourced last (!)
+zsh_highlightning_loc="/usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+[ -f "$zsh_highlightning_loc" ] && source "$zsh_highlightning_loc"
+
+# Make comments without style
+ZSH_HIGHLIGHT_STYLES[comment]='none'

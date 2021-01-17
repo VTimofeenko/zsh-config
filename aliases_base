@@ -1,0 +1,14 @@
+#!/bin/sh
+# Base file to be sourced on all machines
+alias\
+    ll='ls -l' \
+    la='ls -al' \
+    l='ls -l' \
+    _date='date +%F' \
+    ka="killall" \
+    mkd="mkdir -pv" \
+    gau="git add -u" \
+    cdc='cd ${XDG_CONFIG_HOME}'\
+    e='$EDITOR'\
+    v='$EDITOR -R'
+
