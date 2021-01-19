@@ -6,6 +6,9 @@
 #         export EDITOR='nvim'
 # fi
 export ZSH_CONFIG_SHARED_REPO="${HOME}/.config/zsh/shared-repo"
+zsh_history_dir="${HOME}/.cache/zsh"
+[ -d "${zsh_history_dir}" ] || mkdir $zsh_history_dir
+
 export HISTFILE="${HOME}/.cache/zsh/zsh_history"
 export HISTSIZE=10000000
 export SAVEHIST=10000000
