@@ -6,8 +6,8 @@ get_jobs_count() {
 }
 
 jobs_count() {
-	autoload -Uz add-zsh-hook
-	RPROMPT='$(get_jobs_count) ${RPROMPT}'
+	setopt prompt_subst
+	RPROMPT='$(get_jobs_count) '$RPROMPT
 }
 
 jobs_count
