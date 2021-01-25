@@ -1,1 +1,1 @@
-third-party/zsh-async/async.zsh
+../third-party/zsh-async/async.zsh
