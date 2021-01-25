@@ -1,1 +1,1 @@
-third-party/vincentbernat-zshrc/third-party/async.zsh
+third-party/zsh-async/async.zsh
