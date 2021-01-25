@@ -1,6 +1,7 @@
 # -*- sh -*-
 autoload is-at-least
 # Source: https://github.com/vincentbernat/zshrc/blob/master/rc/bookmarks.zsh
+# Changed by Vladimir Timofeenko, changed MARKPATH to local share for persistence
 
 # Handle bookmarks. This uses the static named directories feature of
 # zsh. Such directories are declared with `hash -d

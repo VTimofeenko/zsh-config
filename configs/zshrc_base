@@ -135,8 +135,13 @@ source /usr/share/fzf/key-bindings.zsh
 
 fpath=($fpath ${ZSH_CONFIG_SHARED_REPO}/plugins/)
 
+# Adds git info to RPROMPT
 autoload -Uz prompt_purification_setup && prompt_purification_setup
+# Adds jobs_count to RPROMPT
+autoload -Uz jobs_count.zsh && jobs_count
+# Properly changes the cursor
 autoload -Uz cursor_mode && cursor_mode
+# Adds customized bookmarks.zsh
 autoload -Uz bookmarks.zsh && bookmarks.zsh
 
 # bash-style comments

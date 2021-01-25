@@ -1,3 +1,6 @@
+# Purification with jobs count
+# By Vladimir Timofeenko
+# Original authors:
 # Purification
 # by Matthieu Cneude
 # https://github.com/Phantas0s/purification
@@ -19,14 +22,7 @@
 # %(?..) => prompt conditional - %(condition.true.false)
 
 # Display git status
-# TODO to refactor with switch / using someting else than grep
 # Might be faster using ripgrep too
-jobs_count() {
-	local JOBCOUNT=$(jobs | wc -l)
-	if (( $JOBCOUNT > 0 )); then
-		echo "[j: $JOBCOUNT]"
-	fi
-}
 
 git_prompt_status() {
 	local INDEX STATUS GREP_CMD
@@ -139,7 +135,7 @@ prompt_purification_setup() {
 	ZSH_THEME_GIT_PROMPT_AHEAD="%B%F{green}»%f%b "
 
 	prompt_git_branch
-	RPROMPT='$(jobs_count) $(prompt_git_info) $(git_prompt_status)'
+	RPROMPT='$(prompt_git_info) $(git_prompt_status)'
 	PROMPT=$'%F{white}%~ %(!.%B%F{red}#.%B%F{blue}>)%f%b '
 }
 
