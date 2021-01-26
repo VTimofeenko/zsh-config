@@ -138,7 +138,6 @@ _git_rprompt_info() {
 	get_git_details_for_prompt
 }
 
-autoload -Uz async.zsh && async.zsh
 async_init
 _git_rprompt_async_start
 

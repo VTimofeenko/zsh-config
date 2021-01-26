@@ -5,6 +5,7 @@ done
 # Sets the prompt
 PROMPT=$'%F{white}%~ %(!.%B%F{red}#.%B%F{blue}>)%f%b '
 
+source_if_exists /usr/share/zsh/site-contrib/zsh-async/async.zsh
 
 source_if_exists /usr/share/zsh/site-contrib/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
