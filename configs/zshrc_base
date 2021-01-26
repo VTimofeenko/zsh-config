@@ -3,6 +3,11 @@ for rc_file in "${ZSH_CONFIG_SHARED_REPO}"/configs/rc/*.zsh; do
 	source "${rc_file}"
 done
 
+source_if_exists /usr/share/zsh/site-contrib/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
+# CTRL+space to accept
+bindkey '^ ' autosuggest-accept
+
 # Enable the local plugins
 fpath=($fpath ${ZSH_CONFIG_SHARED_REPO}/plugins/)
 
@@ -20,5 +25,3 @@ autoload -Uz cursor_mode && cursor_mode
 autoload -Uz bookmarks.zsh && bookmarks.zsh
 
 # enable autosuggestions
-source_if_exists /usr/share/zsh/site-contrib/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
