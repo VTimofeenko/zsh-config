@@ -9,7 +9,7 @@ fpath=($fpath ${ZSH_CONFIG_SHARED_REPO}/plugins/)
 # Sets the prompt
 PROMPT=$'%F{white}%~ %(!.%B%F{red}#.%B%F{blue}>)%f%b '
 # Adds git info to RPROMPT
-autoload -Uz git_details_async.zsh && git_details_async
+autoload -Uz git_details_async.zsh && git_details_async.zsh
 # Adds jobs_count to RPROMPT
 autoload -Uz jobs_count.zsh && jobs_count.zsh
 
