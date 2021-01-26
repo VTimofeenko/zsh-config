@@ -4,6 +4,9 @@ for rc_file in "${ZSH_CONFIG_SHARED_REPO}"/configs/rc/*.zsh; do
 done
 # Sets the prompt
 PROMPT=$'%F{white}%~ %(!.%B%F{red}#.%B%F{blue}>)%f%b '
+
+# Enable the local plugins
+fpath=($fpath ${ZSH_CONFIG_SHARED_REPO}/plugins/)
 # Adds git info to RPROMPT
 autoload -Uz git_details_async.zsh && git_details_async.zsh
 
@@ -15,8 +18,6 @@ bindkey '^ ' autosuggest-accept
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#999999,bold,underline"
 
 
-# Enable the local plugins
-fpath=($fpath ${ZSH_CONFIG_SHARED_REPO}/plugins/)
 
 # Adds jobs_count to RPROMPT
 autoload -Uz jobs_count.zsh && jobs_count.zsh
