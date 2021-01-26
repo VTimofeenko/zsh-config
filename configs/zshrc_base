@@ -1,4 +1,4 @@
-for rc_file in "${ZSH_CONFIG_SHARED_REPO}"/rc/*.zsh; do
+for rc_file in "${ZSH_CONFIG_SHARED_REPO}"/configs/rc/*.zsh; do
 	source rc_file
 done
 
