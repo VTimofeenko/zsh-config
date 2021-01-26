@@ -1,5 +1,6 @@
+local rc_file
 for rc_file in "${ZSH_CONFIG_SHARED_REPO}"/configs/rc/*.zsh; do
-	source rc_file
+	source "${rc_file}"
 done
 
 # Enable the local plugins
