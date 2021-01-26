@@ -2,19 +2,22 @@ local rc_file
 for rc_file in "${ZSH_CONFIG_SHARED_REPO}"/configs/rc/*.zsh; do
 	source "${rc_file}"
 done
-
-source_if_exists /usr/share/zsh/site-contrib/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
-# CTRL+space to accept
-bindkey '^ ' autosuggest-accept
-
-# Enable the local plugins
-fpath=($fpath ${ZSH_CONFIG_SHARED_REPO}/plugins/)
-
 # Sets the prompt
 PROMPT=$'%F{white}%~ %(!.%B%F{red}#.%B%F{blue}>)%f%b '
 # Adds git info to RPROMPT
 autoload -Uz git_details_async.zsh && git_details_async.zsh
+
+source_if_exists /usr/share/zsh/site-contrib/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
+ZSH_AUTOSUGGEST_USE_ASYNC=true
+# CTRL+space to accept
+bindkey '^ ' autosuggest-accept
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#999999,bold,underline"
+
+
+# Enable the local plugins
+fpath=($fpath ${ZSH_CONFIG_SHARED_REPO}/plugins/)
+
 # Adds jobs_count to RPROMPT
 autoload -Uz jobs_count.zsh && jobs_count.zsh
 
