@@ -43,7 +43,7 @@ ZSH_PROMPT_GIT_SETUP=(
 )
 
 get_git_details_for_prompt() {
-	local PREFIX INDEX STATUS
+	local PREFIX INDEX STATUS RESULT
 
 	# Check if in git repository
 	if git rev-parse --git-dir 2>/dev/null 1>&2; then
@@ -104,9 +104,11 @@ get_git_details_for_prompt() {
 			STATUS="${ZSH_PROMPT_GIT_SETUP[diverged]} $STATUS"
 		fi
 
+		RESULT=${PREFIX}
 		if [[ ! -z "$STATUS" ]]; then
-			echo "${PREFIX} [ $STATUS]"
+			RESULT="${RESULT} [ $STATUS]"
 		fi
+		echo ${RESULT}
 	fi
 }
 
