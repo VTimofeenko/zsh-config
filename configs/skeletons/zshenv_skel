@@ -9,6 +9,10 @@
 # Replace with proper dir
 export ZSH_CONFIG_SHARED_REPO="REPLACEME"
 
+# In case the XDG_ variables are not assigned, assign them:
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="${HOME}/.config"}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:="${HOME}/.cache"}
 zsh_history_dir="${HOME}/.cache/zsh"
 [ -d "${zsh_history_dir}" ] || mkdir $zsh_history_dir
 
