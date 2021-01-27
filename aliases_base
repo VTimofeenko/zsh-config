@@ -9,6 +9,7 @@ alias\
     mkd="mkdir -pv" \
     gau="git add -u" \
     cdc='cd ${XDG_CONFIG_HOME}'\
-    e='$EDITOR'\
-    v='$EDITOR -R'
-
+    e='${EDITOR}'\
+    v='${EDITOR} -R'\
+    vim='${EDITOR}'\
+    vi='${EDITOR}'
