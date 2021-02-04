@@ -8,7 +8,7 @@ alias\
     ka="killall" \
     mkd="mkdir -pv" \
     gau="git add -u" \
-    gau="git add" \
+    ga="git add" \
     cdc='cd ${XDG_CONFIG_HOME}'\
     e='${EDITOR}'\
     v='${EDITOR} -R'\
