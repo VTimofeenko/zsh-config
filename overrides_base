@@ -7,3 +7,5 @@ alias\
     mv='mv -v' \
     rm="rm -id" \
 
+command -v vidir > /dev/null 2>&1  && alias vidir="vidir --verbose"
+
