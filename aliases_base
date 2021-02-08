@@ -14,3 +14,5 @@ alias\
     v='${EDITOR} -R'\
     vim='${EDITOR}'\
     vi='${EDITOR}'
+
+command -v todo > /dev/null 2>&1  && alias ta="todo new" && alias te="todo edit"
