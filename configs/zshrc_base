@@ -18,15 +18,13 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#999999,bold,underline"
 # Enable the local plugins
 fpath=($fpath ${ZSH_CONFIG_SHARED_REPO}/plugins/)
 # Adds git info to RPROMPT
-autoload -Uz git_details_async.zsh && git_details_async.zsh
+[ "$_ZSH_VT_GIT_PLUGIN" != 'n' ] && autoload -Uz git_details_async.zsh && git_details_async.zsh
 
 # Adds jobs_count to RPROMPT
-autoload -Uz jobs_count.zsh && jobs_count.zsh
+[ "$_ZSH_VT_JOBS_PLUGIN" != 'n' ] && autoload -Uz jobs_count.zsh && jobs_count.zsh
 
 # Properly changes the cursor
 autoload -Uz cursor_mode && cursor_mode
 
 # Adds customized bookmarks.zsh
 autoload -Uz bookmarks.zsh && bookmarks.zsh
-
-# enable autosuggestions

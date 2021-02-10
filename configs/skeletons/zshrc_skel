@@ -2,6 +2,9 @@
 # ZSH_ASYNC_PATH
 # ZSH_FZF_BINDINGS_PATH
 # ZSH_AUTOSUGGESTIONS_PATH
+# Set variables to 'n' in order to not load specific plugins:
+# _ZSH_VT_GIT_PLUGIN
+# _ZSH_VT_JOBS_PLUGIN
 # #---Sourcing the base config---#
 source ${HOME}/.config/zsh/shared-config/zshrc_base
 
