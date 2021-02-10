@@ -1,5 +1,5 @@
 # Enable fzf bindings for history and navigation. May be Gentoo-specific.
-source /usr/share/fzf/key-bindings.zsh
+source_if_exists ${ZSH_FZF_BINDINGS_PATH:-/usr/share/fzf/key-bindings.zsh}
 
 bindkey "^A" vi-beginning-of-line
 bindkey "^E" vi-end-of-line

@@ -1,3 +1,9 @@
 [submodule "third-party/zsh-async"]
 	path = third-party/zsh-async
 	url = https://github.com/mafredri/zsh-async
+[submodule "third-party/zsh-autosuggestions"]
+	path = third-party/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "third-party/zsh-syntax-highlighting"]
+	path = third-party/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
