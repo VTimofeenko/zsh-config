@@ -56,30 +56,30 @@ get_git_details_for_prompt() {
 
 		# Untracked files
 		local UNTRACKED_FILES=$(echo "$INDEX" | $GREP_CMD -c -e "^\?" 2>/dev/null)
-		if [ ! -z $UNTRACKED_FILES ]; then
+		if (( $UNTRACKED_FILES != 0 )); then
 			STATUS="${ZSH_PROMPT_GIT_SETUP[untracked]} : $UNTRACKED_FILES $STATUS"
 		fi
 
 		# Added block
 		local ADDED_FILES=$(echo $INDEX | $GREP_CMD -c -e '^A  ' -e '^M  ' -e '^MM ' 2>/dev/null)
-		if [ ! -z $ADDED_FILES ]; then
+		if (( $ADDED_FILES != 0 )); then
 			STATUS="${ZSH_PROMPT_GIT_SETUP[added]} : $ADDED_FILES $STATUS"
 		fi
 
 		# Modified block
 		local MODIFIED_FILES=$(echo $INDEX | $GREP_CMD -c -e '^ M ' -e '^AM ' -e '^MM ' -e '^ T ' 2>/dev/null)
-		if [ ! -z $MODIFIED_FILES ]; then
+		if (( $MODIFIED_FILES != 0 )); then
 			STATUS="${ZSH_PROMPT_GIT_SETUP[modified]} : $MODIFIED_FILES $STATUS"
 		fi
 
 		# Renamed block
 		local RENAMED_FILES=$(echo $INDEX | $GREP_CMD -c -e '^R  ' 2>/dev/null)
-		if [ ! -z $RENAMED_FILES ]; then
+		if (( $RENAMED_FILES != 0 )); then
 			STATUS="${ZSH_PROMPT_GIT_SETUP[renamed]} : $RENAMED_FILES $STATUS"
 		fi
 
 		local DELETED_FILES=$(echo $INDEX | $GREP_CMD -c -e '^ D ' -e '^D  ' -e '^AD ' 2>/dev/null)
-		if [ ! -z $DELETED_FILES ]; then
+		if (( $DELETED_FILES != 0 )); then
 			STATUS="${ZSH_PROMPT_GIT_SETUP[deleted]} : $DELETED_FILES $STATUS"
 		fi
 
@@ -88,7 +88,7 @@ get_git_details_for_prompt() {
 		fi
 
 		local UNMERGED_FILES=$(echo $INDEX | $GREP_CMD -c -e '^UU ' 2>/dev/null)
-		if [ ! -z $UNMERGED_FILES ]; then
+		if (( $UNMERGED_FILES != 0 )); then
 			STATUS="${ZSH_PROMPT_GIT_SETUP[unmerged]} $STATUS"
 		fi
 
