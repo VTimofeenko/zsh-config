@@ -1,6 +1,6 @@
 # Enable fzf bindings for history and navigation. May be Gentoo-specific.
 # Loads only if "fzf" is truly a command
-if [ command -v fzf > /dev/null 2>&1 ]; then
+if command -v fzf > /dev/null 2>&1 ; then
 	source_if_exists ${ZSH_FZF_BINDINGS_PATH:-/usr/share/fzf/key-bindings.zsh}
 else
 	# Fall back to default ctrl+R
